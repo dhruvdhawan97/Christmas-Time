@@ -2,7 +2,11 @@ const secondsEl = document.getElementById("secs");
 const minutesEl = document.getElementById("mins");
 const hoursEl = document.getElementById("hours");
 const daysEl = document.getElementById("days");
-const newYears = " 25 Dec 2021 00:00:00";
+const yearEl = document.getElementById("year");
+
+const date = new Date();
+const year = date.getFullYear();
+const newYears = " 25 Dec" + year;
 function countdown() {
   const newYearsDate = new Date(newYears);
   const currentDate = new Date();
@@ -17,9 +21,11 @@ function countdown() {
   minutesEl.innerHTML = formatTime(minutes);
   hoursEl.innerHTML = formatTime(hours);
   daysEl.innerHTML = formatTime(days);
+  yearEl.innerHTML = year;
   //   console.log(days, hours, minutes, seconds);
 }
 
+console.log(year);
 function formatTime(time) {
   return time < 10 ? `0${time}` : time;
 }
