@@ -2,7 +2,7 @@ const secondsEl = document.getElementById("secs");
 const minutesEl = document.getElementById("mins");
 const hoursEl = document.getElementById("hours");
 const daysEl = document.getElementById("days");
-const yearEl = document.getElementById("year");
+const yearEl = document.getElementById("current-year");
 
 const date = new Date();
 const year = date.getFullYear();
