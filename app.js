@@ -43,7 +43,7 @@ function countdown() {
   //   console.log(days, hours, minutes, seconds);
 }
 
-console.log(year);
+// console.log(year);
 function formatTime(time) {
   return time < 10 ? `0${time}` : time;
 }
