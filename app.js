@@ -25,7 +25,7 @@ function getNextChristmasDate(){
 function countdown() {
   const today = new Date();
 
-  const totSeconds = Math.floor((targetDate - today) / 1000);
+  let totSeconds = Math.floor((targetDate - today) / 1000);
 //rollover to next christmas
   if (totSeconds <=0){
     targetDate = getNextChristmasDate();
