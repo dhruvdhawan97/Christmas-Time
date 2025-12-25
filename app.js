@@ -4,12 +4,25 @@ const hoursEl = document.getElementById("hours");
 const daysEl = document.getElementById("days");
 const yearEl = document.getElementById("current-year");
 
-const date = new Date();
-const year = date.getFullYear();
-const newYears = " 25 Dec" + year;
+funtion getChristmasDate(){
+  const today = new Date();
+  let year = today.getFullYear();
+
+  // Christmas date
+  let christmas = new Date(year, 11, 25);
+
+  // christmas day passed switch to next year
+  if(today>christmas){
+    year++;
+    christmas= new Date(year, 11, 25);
+  }
+  yearEl.innerHTML = year;
+  return christmas;
+}
+
 function countdown() {
-  const newYearsDate = new Date(newYears);
-  const currentDate = new Date();
+  const targetDate = getChristmasDate();
+  const today = new Date();
 
   const totSeconds = Math.floor((newYearsDate - currentDate) / 1000);
   const seconds = Math.floor(totSeconds) % 60;
@@ -21,7 +34,6 @@ function countdown() {
   minutesEl.innerHTML = formatTime(minutes);
   hoursEl.innerHTML = formatTime(hours);
   daysEl.innerHTML = formatTime(days);
-  yearEl.innerHTML = year;
   //   console.log(days, hours, minutes, seconds);
 }
 
