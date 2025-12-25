@@ -4,7 +4,7 @@ const hoursEl = document.getElementById("hours");
 const daysEl = document.getElementById("days");
 const yearEl = document.getElementById("current-year");
 
-funtion getChristmasDate(){
+function getChristmasDate(){
   const today = new Date();
   let year = today.getFullYear();
 
