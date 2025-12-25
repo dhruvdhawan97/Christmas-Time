@@ -24,7 +24,7 @@ function countdown() {
   const targetDate = getChristmasDate();
   const today = new Date();
 
-  const totSeconds = Math.floor((newYearsDate - currentDate) / 1000);
+  const totSeconds = Math.floor((targetDate - today) / 1000);
   const seconds = Math.floor(totSeconds) % 60;
   const minutes = Math.floor(totSeconds / 60) % 60;
   const hours = Math.floor(totSeconds / 3600) % 24;
